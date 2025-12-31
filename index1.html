@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BUpgrade Marketing Agency — About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-sGZjqfCk3y..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="style1.css">
+  <style>
+    :root{
+      --bg-dark:#0f1112;
+      --bg-light:#ffffff;
+      --text:#333;
+      --muted:#555;
+      --brand:#e67e22;
+      --brand-dark:#d35400;
+      --card:#f9f9f9;
+      --soft:#fff8f0;
+      --border:#e9e9e9;
+      --max:1200px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+
+    body{
+      font-family:'Roboto',sans-serif;
+      color:var(--text);
+      background:var(--bg-light);
+      line-height:1.6;
+    }
+
+    /* Header / Hero */
+    .hero{
+      background: linear-gradient(135deg, rgba(15,17,18,0.95), rgba(15,17,18,0.85)),
+                  url('hero-bg.jpg') center/cover no-repeat;
+      color:#fff;
+      padding:90px 20px 70px;
+    }
+    .container{max-width:var(--max);margin:0 auto}
+    .brand-title{
+      font-family:'Poppins',sans-serif;
+      font-weight:700;
+      font-size:2.6rem;
+      color:var(--brand);
+      margin:0 0 16px;
+      opacity:0; transform:translateY(24px);
+      animation:fadeUp 0.9s ease-out forwards;
+    }
+    .hero p{
+      max-width:800px;
+      margin:0 0 26px;
+      color:#ddd;
+      opacity:0; transform:translateY(24px);
+      animation:fadeUp 0.9s ease-out forwards 0.15s;
+    }
+    .hero .cta{
+      display:inline-block;
+      background: linear-gradient(45deg, var(--brand), var(--brand-dark));
+      color:#fff; text-decoration:none;
+      padding:12px 22px; border-radius:10px;
+      font-weight:700;
+      box-shadow:0 8px 22px rgba(0,0,0,0.25);
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+      opacity:0; transform:translateY(24px);
+      animation:fadeUp 0.9s ease-out forwards 0.3s;
+    }
+    .hero .cta:hover{ transform:translateY(-2px); box-shadow:0 12px 28px rgba(0,0,0,0.3) }
+
+    @keyframes fadeUp{
+      to{opacity:1; transform:translateY(0)}
+    }
+
+    /* Section base */
+    section{padding:60px 20px}
+    .section-header{
+      text-align:center; margin-bottom:34px;
+    }
+    .section-header h2{
+      font-family:'Poppins',sans-serif;
+      font-weight:600; font-size:2rem; color:var(--brand);
+      margin:0 0 10px;
+    }
+    .section-header p{color:var(--muted); max-width:780px; margin:0 auto}
+
+    /* Who we are */
+    .about-grid{
+      display:grid; grid-template-columns:1fr 1fr; gap:26px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:24px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    }
+    .card h3{
+      font-family:'Poppins',sans-serif; font-weight:600; font-size:1.3rem; margin:0 0 12px; color:#222;
+    }
+    .card p{margin:0 0 10px; color:var(--muted)}
+
+    /* How social media helps growth */
+    .benefits{
+      display:grid; grid-template-columns:repeat(2,1fr); gap:18px;
+    }
+    .benefit{
+      background:var(--soft);
+      border:1px solid #f3e2d0;
+      border-radius:12px; padding:18px;
+    }
+    .benefit h4{
+      margin:0 0 8px; font-size:1.05rem; color:#222;
+    }
+    .benefit p{margin:0; color:#444}
+    .benefit i{color:var(--brand); margin-right:8px}
+
+    /* Services overview cards */
+    .services-grid{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+    }
+    .service-card{
+      background:#fefefe; border:1px solid var(--border);
+      border-radius:14px; padding:22px; text-align:left;
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .service-card:hover{ transform:translateY(-6px); box-shadow:0 12px 26px rgba(0,0,0,0.08) }
+    .service-card i{ font-size:1.6rem; color:var(--brand); margin-bottom:10px; display:block }
+    .service-card h3{ margin:0 0 8px; font-size:1.2rem; color:#222 }
+    .service-card p{ margin:0; color:var(--muted) }
+
+    /* Why choose us */
+    .reasons{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:18px;
+    }
+    .reason{
+      background:var(--card); border:1px solid var(--border);
+      border-radius:12px; padding:18px;
+    }
+    .reason b{color:#222}
+    .reason p{margin:6px 0 0; color:var(--muted)}
+
+    /* Trust & Security */
+    .trust-box{
+      background:var(--soft);
+      border:1px solid #f3e2d0;
+      border-radius:14px; padding:18px;
+      max-width:800px; margin:0 auto;
+    }
+    .trust-list{list-style:none; padding:0; margin:10px 0 0}
+    .trust-list li{ margin:8px 0; color:#444 }
+
+    /* CTA band */
+    .cta-band{
+      background:linear-gradient(135deg, #fff, #fff5ec);
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      text-align:center;
+      padding:48px 20px;
+    }
+    .cta-band h3{ margin:0 0 12px; font-size:1.6rem; color:#222 }
+    .cta-band p{ margin:0 0 18px; color:var(--muted) }
+    .cta-band .cta{ background: linear-gradient(45deg, var(--brand), var(--brand-dark)); color:#fff; padding:12px 22px; border-radius:10px; text-decoration:none; font-weight:700; display:inline-block }
+
+    /* Footer */
+    footer{
+      background:var(--bg-dark); color:#fff; padding:30px 20px;
+    }
+    .footer-container{
+      max-width:var(--max); margin:0 auto; display:flex; gap:30px; flex-wrap:wrap; justify-content:space-between;
+    }
+    .footer-about{flex:1; min-width:260px}
+    .footer-links{flex:1; min-width:220px}
+    .footer-social{flex:1; min-width:220px}
+    .footer-about h4,.footer-links h4,.footer-social h4{ color:var(--brand); margin:0 0 10px }
+    .footer-links ul{ list-style:none; padding:0; margin:0 }
+    .footer-links li{ margin:6px 0; color: #ffff;}
+    .footer-links a{ color:#ddd; text-decoration:none }
+    .social-row{ display:flex; gap:10px }
+    .social-icon{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:36px; height:36px; border-radius:50%;
+      background:var(--brand); color:#fff; transition:transform 0.25s ease, background 0.25s ease;
+    }
+    .social-icon:hover{ transform:scale(1.08); background:var(--brand-dark) }
+    .footer-bottom{ text-align:center; margin-top:18px; border-top:1px solid rgba(255,255,255,0.15); padding-top:12px; color:#aaa; font-size:0.9rem }
+
+    /* Responsive */
+    @media (max-width:992px){
+      .about-grid{ grid-template-columns:1fr }
+      .benefits{ grid-template-columns:1fr }
+      .services-grid{ grid-template-columns:repeat(2,1fr) }
+      .reasons{ grid-template-columns:repeat(2,1fr) }
+    }
+    @media (max-width:640px){
+      .services-grid{ grid-template-columns:1fr }
+      .reasons{ grid-template-columns:1fr }
+    }
+  </style>
+</head>
+<body>
+
+ <header class="site-header">
+      <a href="#" class="logo">
+        <img src="1766649996574.jpg" alt="logo" />
+        <span class="logo-name">BUpgrade</span>
+      </a>
+      <nav class="atri">
+        <!-- <form action="#" class="serch-box">
+          <input class="text" type="text" placeholder="Services" />
+          <button type="submit">GO</button>
+        </form> -->
+        <a href="index.html" target="_self">Home</a>
+        <a href="index.html#services1" target="_self">Services</a>
+        <a href="index.html#contact1" target="_self">Contact Us</a>
+        <a href="#" target="_self">About Us</a>
+      </nav>
+    </header>
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Who we are</h2>
+        <p>We’re a Bilaspur‑born, results‑focused marketing partner helping local shops, gyms, and small businesses scale with modern digital strategies.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="card">
+          <h3>Our mission</h3>
+          <p>Make marketing simple, transparent, and ROI‑driven for small businesses, using data, creativity, and local insight.</p>
+          <p>From brand awareness to conversions, we align every campaign with your business goals.</p>
+        </div>
+
+        <div class="card">
+          <h3>What we do</h3>
+          <p><b>Social Media Ads:</b> High‑impact campaigns on Facebook, Instagram, and more.</p>
+          <p><b>Web Development:</b> Fast, responsive websites that convert visitors into customers.</p>
+          <p><b>Meta Ads:</b> Advanced targeting and optimization across Meta platforms.</p>
+          <p><b>Social Media Management:</b> Content, engagement, and growth strategies that build loyalty.</p>
+          <p><b>Other:</b> SEO, branding, creative design, and analytics reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How social media helps you grow -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>How social media drives growth</h2>
+        <p>Smart social strategies turn attention into trust, and trust into revenue. Here’s how it creates measurable impact.</p>
+      </div>
+
+      <div class="benefits">
+        <div class="benefit">
+          <h4><i class="fas fa-bullhorn"></i><b>Brand awareness:</b></h4>
+          <p>Consistent posts and ads make your business recognizable and memorable in your market.</p>
+        </div>
+        <div class="benefit">
+          <h4><i class="fas fa-bullseye"></i><b>Precise targeting:</b></h4>
+          <p>Reach the right people by location, age, interests, and language for efficient ad spend.</p>
+        </div>
+        <div class="benefit">
+          <h4><i class="fas fa-handshake-angle"></i><b>Loyalty & trust:</b></h4>
+          <p>Comments, DMs, and stories build relationships that keep customers coming back.</p>
+        </div>
+        <div class="benefit">
+          <h4><i class="fas fa-chart-line"></i><b>Data‑driven optimization:</b></h4>
+          <p>Analytics reveal what works so we refine creatives, audiences, and budgets for better ROI.</p>
+        </div>
+        <div class="benefit">
+          <h4><i class="fas fa-wallet"></i><b>Cost‑effective growth:</b></h4>
+          <p>Flexible budgets beat traditional ads, helping small brands compete with bigger players.</p>
+        </div>
+        <div class="benefit">
+          <h4><i class="fas fa-people-group"></i><b>Community building:</b></h4>
+          <p>Groups, hashtags, and interactive posts create belonging and word‑of‑mouth momentum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services overview -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>What we offer</h2>
+        <p>Clear, outcome‑focused services designed to grow your business online.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-rectangle-ad"></i>
+          <h3>Social media ads</h3>
+          <p>Campaign strategy, targeting, creatives, and A/B testing to capture demand and drive conversions.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-code"></i>
+          <h3>Web development</h3>
+          <p>Modern, fast websites with strong UX, clear messaging, and on‑page SEO for discovery.</p>
+        </div>
+        <div class="service-card">
+          <i class="fab fa-meta"></i>
+          <h3>Meta ads</h3>
+          <p>Performance‑focused ads across Meta properties with pixel setup and event tracking.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-users"></i>
+          <h3>Social media management</h3>
+          <p>Content calendars, daily engagement, and growth sprints that build consistent brand presence.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-magnifying-glass-chart"></i>
+          <h3>SEO & analytics</h3>
+          <p>Search visibility and reporting that show progress, wins, and next best actions.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-palette"></i>
+          <h3>Branding & design</h3>
+          <p>Logos, visuals, and messaging aligned to your audience and market positioning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Why choose BUpgrade</h2>
+        <p>We blend local understanding with modern execution for dependable, scalable results.</p>
+      </div>
+
+      <div class="reasons">
+        <div class="reason">
+          <b>Local expertise:</b>
+          <p>We know Bilaspur markets and regional nuances, so your campaigns feel relevant and real.</p>
+        </div>
+        <div class="reason">
+          <b>Global inspiration:</b>
+          <p>We apply modern design and data practices, not just trends — what actually works.</p>
+        </div>
+        <div class="reason">
+          <b>Transparent ROI:</b>
+          <p>Clear reporting, measurable outcomes, and iterative improvements you can trust.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Security -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Trust & security</h2>
+        <p>Your data and business are protected with secure practices and compliant billing.</p>
+      </div>
+
+      <div class="trust-box">
+        <ul class="trust-list">
+          <li>🔒 <b>SSL secured connection:</b> Safe, encrypted communication across our site.</li>
+          <li>📜 <b>GST‑compliant billing:</b> Proper invoices and documentation for your records.</li>
+          <li>🛡️ <b>Privacy first:</b> We value your privacy and handle information responsibly.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="cta-band" id="contact">
+    <div class="container">
+      <h3>Ready to grow with BUpgrade?</h3>
+      <p>Let’s discuss your goals and build a plan that delivers results.</p>
+      <a href="mailto:bupgrade7@gmail.com" class="cta">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h4>BUpgrade</h4>
+        <p>Helping small businesses scale with smart marketing, modern websites, and performance advertising.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services1" target="_self">Services</a></li>
+          <li><a href="index.html#contact1" target="_self">contact Us</a></li>
+          <li><a href="index.html#contact1">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow us</h4>
+        <div class="social-row">
+          <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a class="social-icon" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="social-icon" href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 BUpgrade Marketing Agency. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
